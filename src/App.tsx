@@ -2,7 +2,7 @@ import './App.css';
 import MoviesList from './movies/MoviesList'
 import { landingPaeDTO, movieDTO } from './movies/movies.model';
 import { useEffect, useState } from 'react';
-//test lahiru
+//test lahiru 2
 function App() {
   const [movies,setMovies] = useState<landingPaeDTO>({});
   useEffect(()=>{
