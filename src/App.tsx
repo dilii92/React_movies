@@ -1,8 +1,9 @@
 import './App.css';
 import MoviesList from './movies/MoviesList'
-import { landingPaeDTO, movieDTO } from './movies/movies.model';
+import { landingPaeDTO } from './movies/movies.model';
 import { useEffect, useState } from 'react';
-//test lahiru 2
+import Button from './utils/Button';
+
 function App() {
   const [movies,setMovies] = useState<landingPaeDTO>({});
   useEffect(()=>{
@@ -32,13 +33,14 @@ function App() {
   });
  
 return (
-  <>
+  <div className="container">
+    <Button>Whatever Text</Button>
     <h3>In Theaters</h3>
     <MoviesList movies={movies.inTheaters}/>
 
     <h3>Upcoming releases</h3>
     <MoviesList movies={movies.upComing}/>
-  </>
+  </div>
   )
 }
 
